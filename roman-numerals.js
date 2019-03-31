@@ -2,15 +2,19 @@
 let num = 0;
 
 function toRoman(num) {
-  if(num === 1) return 'I';
-  if(num === 2) return 'II';
-  if(num === 3) return 'III';
-  if(num === 4) return 'IV';
-  if(num === 5) return 'V';
-  if(num == 6) return 'VI';
-  if(num == 9) return 'IX';
-  return num;
+  let numString = num.toString();
+  if(numString === '1' && numString.length === 1) return 'I';
+  if(numString === '2' && numString.length === 1) return 'II';
+  if(numString === '3' && numString.length === 1) return 'III';
+  if(numString === '4' && numString.length === 1) return 'IV';
+  if(numString === '5' && numString.length === 1) return 'V';
+  // if(num == 6) return 'VI';
+  // if(num == 9) return 'IX';
+
+  // if()
   console.log('* num *', num);
+  console.log('* numString *', numString);
+  return num;
 }
 
 
