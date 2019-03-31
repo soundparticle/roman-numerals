@@ -8,12 +8,14 @@ function toRoman(num) {
   if(numString === '3' && numString.length === 1) return 'III';
   if(numString === '4' && numString.length === 1) return 'IV';
   if(numString === '5' && numString.length === 1) return 'V';
-  // if(num == 6) return 'VI';
-  // if(num == 9) return 'IX';
+  if(numString === '6' && numString.length === 1) return 'VI';
+  if(numString === '9' && numString.length === 1) return 'IX';
+
+  // if(numString.length === 2 && ) return 'XXVII';
 
   // if()
   console.log('* num *', num);
-  console.log('* numString *', numString);
+  console.log('* numString *', numString.charAt(1));
   return num;
 }
 
