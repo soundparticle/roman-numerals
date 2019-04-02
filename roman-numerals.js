@@ -2,25 +2,34 @@
 let num = 0;
 
 function toRoman(num) {
-  let numString = num.toString();
-  if(numString === '1' && numString.length === 1) return 'I';
-  if(numString === '2' && numString.length === 1) return 'II';
-  if(numString === '3' && numString.length === 1) return 'III';
-  if(numString === '4' && numString.length === 1) return 'IV';
-  if(numString === '5' && numString.length === 1) return 'V';
-  if(numString === '6' && numString.length === 1) return 'VI';
-  if(numString === '9' && numString.length === 1) return 'IX';
 
-  // if(numString.length === 2 && ) return 'XXVII';
+  let roman = {
+    M: 1000,
+    CM: 900,
+    D: 500,
+    CD: 400,
+    C: 100,
+    XC: 90,
+    L: 50,
+    XL: 40,
+    X: 10,
+    IX: 9,
+    V: 5,
+    IV: 4,
+    I: 1
+  };
 
-  // if()
-  console.log('* num *', num);
-  console.log('* numString *', numString.charAt(1));
-  return num;
+  let romanNum = '';
+
+  for(let i of Object.keys(roman)) {
+    let q = Math.floor(num / roman[i]);
+    num -= q * roman[i];
+    romanNum += i.repeat(q);
+    console.log('** q **', q);
+  }
+
+  return romanNum;
 }
-
-
-
 
 module.exports = {
   toRoman
